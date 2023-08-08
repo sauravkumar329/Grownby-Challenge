@@ -52,6 +52,8 @@ const AddFarm: React.FC<AddFarmProps> = ({ navigation }) => {
       }
     } catch (error) {
       alert('Error adding farm: ' + error);
+      console.log(error)
+      setLoading(false);
     }
 
     setLoading(false);
