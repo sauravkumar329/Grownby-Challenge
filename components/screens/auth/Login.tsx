@@ -77,6 +77,7 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
                             <AppTextInput icon={"key"} placeholder={"Your Password"} onChangeText={handleChange("password")} secureTextEntry={true} />
                             <AppText style={{ "color": colors.danger }}>{errors.password}</AppText>
                             <AppButton title="Login" onPress={handleSubmit} />
+                            <AppButton title="Register" onPress={()=>navigation.navigate("Signup")} />
                             {iserror && <AppText style={{ color: colors.danger }}>
                                 {errorMsg}
                             </AppText>}
